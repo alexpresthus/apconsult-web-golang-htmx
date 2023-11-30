@@ -1,0 +1,20 @@
+{
+	"name": "apconsult-web-golang-htmx",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alexpresthus/apconsult-web-golang-htmx.git"
+	},
+	"scripts": {
+		"build": "tailwindcss build -o public/static/css/tailwind.css",
+		"watch": "tailwindcss build -o public/static/css/tailwind.css --watch"
+	},
+	"author": "Alexander Presthus (alexpresthus)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/alexpresthus/apconsult-web-golang-htmx/issues"
+	},
+	"homepage": "https://github.com/alexpresthus/apconsult-web-golang-htmx#readme",
+	"dependencies": {
+		"tailwindcss": "^3.3.5"
+	}
+}
