@@ -9,9 +9,6 @@
 *.dylib
 bin/*
 
-# Keep heroku buildpack pre- and post-compile scripts
-!go-pre-compile
-!go-post-compile
 
 # Test binary, built with `go test -c`
 *.test
@@ -30,6 +27,3 @@ node_modules/
 
 #env
 .env
-
-# Tailwind build files
-tailwind.css
