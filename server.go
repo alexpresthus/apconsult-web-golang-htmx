@@ -1,12 +1,14 @@
 package main
 
 import (
+	"errors"
 	"html/template"
 	"io"
 	"log"
 	"net/http"
 	"os"
 
+	"github.com/joho/godotenv"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
@@ -22,11 +24,20 @@ func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Con
 	return t.templates.ExecuteTemplate(w, name, data)
 }
 
-func main() {
-	port := os.Getenv("PORT")
+func goEnvVar(key string) (string, error) {
+	godotenv.Load(".env")
+	val := os.Getenv(key)
+	if val == "" {
+		return "", errors.New("Missing env var $" + key)
+	}
+	return val, nil
+}
 
-	if port == "" {
-		log.Fatal("$PORT must be set")
+func main() {
+	port, err := goEnvVar("PORT")
+
+	if err != nil {
+		log.Fatal(err)
 	}
 	e := echo.New()
 	e.Use(middleware.Logger())
