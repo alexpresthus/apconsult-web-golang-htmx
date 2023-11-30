@@ -1,0 +1,64 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+    <link rel="stylesheet" href="https://cdn.xeiaso.net/static/pkg/iosevka/family.css" />
+    <title>apconsult</title>
+</head>
+<body class="bg-light-brown p-3">
+    <header>
+        <nav class="flex flex-row items-center">
+            <ul class="flex flex-row justify-between w-2/6">
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="w-full max-w-xl my-0 mx-auto">
+            <div class="w-full box-border h-7 bg-light-gray rounded-tr-md rounded-tl-md flex flex-row items-center space-x-2">
+                <div class="h-3 w-3 rounded-full border border-solid bg-[#ff3b47] border-[#9d252b] ml-1"></div>
+                <div class="h-3 w-3 rounded-full border border-solid bg-[#ffc100] border-[#9d802c]"></div>
+                <div class="h-3 w-3 rounded-full border border-solid bg-[#049931] border-[#049931]"></div>
+            </div>
+            <div class="flex justify-center w-full box-border bg-dark-gray p-5 rounded-bl-md rounded-br-md">
+                <div class="w-5/6 md:w-4/6 text-left space-y-4">
+                    <div class="flex flex-row">
+                        <p class="text-[#9CD9F0]">&dollar;&nbsp;</p>
+                        <p class="animate-typing-1 overflow-hidden whitespace-nowrap opacity-0 text-[#9CD9F0]">
+                            apconsult --services
+                            <span class="animate-blink-1 text-white font-bold opacity-0">_</span>
+                        </p>
+                    </div>
+                    <p class="animate-typing-2 overflow-hidden whitespace-nowrap opacity-0 text-[#CDEE69]">software, cloud, integration and deployment
+                        <span class="animate-blink-2 text-white font-bold opacity-0">_</span>
+                    </p>
+                    <p class="animate-typing-3 overflow-hidden whitespace-nowrap opacity-0 text-[#E09690]">[?] What would you like to do?
+                        <span class="animate-blink-3 text-white font-bold opacity-0">_</span>
+                    </p>
+                    <form>
+                        <p class="animate-typing-4 overflow-hidden whitespace-nowrap opacity-0 text-white">
+                            <label html-for="prompt">></label>
+                            <input
+                                id="txt" type="text"
+                                role="presentation" autocomplete="off" autofocus
+                                class="bg-dark-gray appearance-none caret-transparent outline-none w-[1ch]"
+                                onkeypress="this.style.width = (this.value.length + 1) + 'ch';"
+                                onblur="this.focus()"
+                                >
+                            <span class="animate-blink-4 text-white font-bold opacity-0 ml-[-8px]">_</span>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
+{{end}}
