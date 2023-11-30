@@ -8,6 +8,10 @@
 *.so
 *.dylib
 
+# no binaries (compiled without file extension) but keep Heroku Procfile
+**/*
+!Procfile
+
 # Test binary, built with `go test -c`
 *.test
 
