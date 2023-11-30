@@ -1,1 +1,1 @@
-web: apconsult-web-golang-htmx
+web: bin/apconsult-web-golang-htmx
